@@ -9,6 +9,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
+     * TODO:
+     * IN PROGRESS :
+     * DONE
      * @Route("/home", name="home")
      */
     public function index(): Response
