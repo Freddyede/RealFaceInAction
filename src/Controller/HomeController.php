@@ -22,9 +22,9 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
-        $produits = $this->getDoctrine()->getRepository(Produits::class)->findByLittlePriceAndMoreUser();
         return $this->render('home/index.html.twig',[
-            'produits'=>$produits,
+            'produits'=>$this->getDoctrine()->getRepository(Produits::class)
+                ->findByLittlePriceAndMoreUser(),
             'controller_name' => 'HomeController',
             'message' => 'Welcome to your new home controller!',
         ]);
