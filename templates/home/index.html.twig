@@ -1,6 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
     <h1>{{ controller_name }}</h1>
     <p>{{ message }}</p>
+    <div class="row">
+        {% for produit in produits %}
+            <div class="card ml-auto mr-auto" style="width: 16rem;">
+                <img class="card-img-top" src="{{ produit.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">{{ produit.name }}</p>
+                    <p class="card-text">Prix : {{ produit.price }} €</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
